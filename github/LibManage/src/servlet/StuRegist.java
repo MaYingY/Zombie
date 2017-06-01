@@ -3,7 +3,6 @@ package servlet;
 import cn.itcast.commons.CommonUtils;
 import cn.itcast.servlet.BaseServlet;
 import domain.Student;
-
 import service.StuService;
 import service.UserException;
 
@@ -16,9 +15,8 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
-
 /**
- * Created by dell on 17-5-24.
+ * Created by dell on 17-5-26.
  */
 @WebServlet("/StuRegist")
 public class StuRegist extends BaseServlet {
@@ -55,7 +53,5 @@ public class StuRegist extends BaseServlet {
         stuService.addStu(student);
         request.setAttribute("msg","用户添加成功！");
         return "msg.jsp";
-
-
     }
 }

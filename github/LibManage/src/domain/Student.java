@@ -7,8 +7,8 @@ public class Student {
     public int id;
     public String name;
     public String password;
-    public int money;
     public int bookcount;
+    public Double money;
 
     public int getId() {
         return id;
@@ -34,11 +34,11 @@ public class Student {
         this.password = password;
     }
 
-    public int getMoney() {
+    public Double getMoney() {
         return money;
     }
 
-    public void setMoney(int money) {
+    public void setMoney(Double money) {
         this.money = money;
     }
 
