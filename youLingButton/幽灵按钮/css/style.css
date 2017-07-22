@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	/*计算机表示颜色用16进制：以＃开头，共6位，每两位代表一个颜色*/
+	background-color: #333;
+}
+
+.box{
+	width: 900px;
+	height: 300px;
+	/*左右居中*/
+	margin: 100px auto;
+}
+
+.link{
+	width: 270px;
+	height: 300px;
+	float: left;
+	margin-left: 22.5px;
+}
+
+.link .icon{
+	/*行级元素，不具备宽高,想设置宽高，需要块状显示*/
+	display: block;
+	width: 200px;
+	height: 200px;
+	margin: 20px auto;
+	transition: all 0.5s;
+}
+
+.link-mission .icon{
+	/*背景：图片路径 不平铺 左右居中 上下居中*/
+	background: url(../img/mission.png) no-repeat center center;
+}
+
+.link-play .icon{
+	background: url(../img/play.png) no-repeat center center;
+}
+
+.link-touch .icon{
+	background: url(../img/touch.png) no-repeat center center;
+}
+
+.link .icon:hover{
+	transform: rotate(360deg) scale(1.2);
+}
+
+.link .btn{
+	display: block;
+	width: 200px;
+	height: 40px;
+	/*边框：宽度 实线 白色*/
+	
+	margin: 0px auto;
+	/*文字颜色*/
+	color: green;
+	/*字体加粗*/
+	font-weight: bolder;
+	/*行高*/
+	line-height: 40px;
+	padding-left: 20px;
+	box-sizing: border-box;
+	background: url(../img/allow.png) no-repeat 140px center;
+	transition: all 0.5s;
+	position: relative;
+}
+
+.btn:hover{
+	background: url(../img/allow.png) no-repeat 160px center;
+}
+
+.btn .line{
+	display: block;
+	background-color: white;
+	position: absolute;
+	transition: all 0.5s;
+}
+
+.btn .line-top{
+	/*100%是外层盒子宽度的100%*/
+	width: 0;
+	height: 2px;
+	/*100%是外层盒子宽度的100%*/
+	left: -100%;
+	top: -2px;
+}
+
+.btn:hover .line-top{
+	width: 100%;
+	left: 0;
+}
+
+.btn .line-right{
+	width: 2px;
+	height: 0;
+	right: -2px;
+	/*100%是外层盒子高度的100%*/
+	top: -100%;
+}
+
+.btn:hover .line-right{
+	height: 100%;
+	top:0;
+}
+
+.btn .line-bottom{
+	width: 0;
+	height: 2px;
+	bottom: -2px;
+	right: -100%;
+}
+
+.btn:hover .line-bottom{
+	width: 100%;
+	right: 0px;
+}
+
+.btn .line-left{
+	width: 2px;
+	height: 0;
+	left: -2px;
+	bottom: -100%;
+}
+
+.btn:hover .line-left{
+	height: 100%;
+	bottom: 0;
+}
