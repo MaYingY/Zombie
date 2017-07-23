@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div id="bgm" style="background: url(img/background1unsodded.jpg); width: 1400px; height: 600px;">
+		</div>
+		<div id="caoping" style="position: absolute; left: 255px; top: 263px; background: url(img/sod1row.png); width: 0px; height: 117px; ">	
+		</div>
+		<img id="sodroll" src="img/SodRoll.png" style="position:absolute; left: 255px; top: 200px;">
+		</img>
+		<img id="sodrollCap" src="img/SodRollCap.png" style="position: absolute; left: 250px; top: 305px;">
+		</img>
+		
+	</body>
+	
+	<script src="js/jquery-1.8.3.js"></script>
+		
+	<script>
+		$("#sodroll").animate({left: 965, width: 50, top:248}, 4000);
+		$("#sodrollCap").animate({left: 963, width: 52, top:325}, 4000);
+		$("#caoping").animate({width:755}, 4000);
+		
+		
+		
+		//当运动结束以后，再消失
+		setTimeout(function(){ 
+			//4000毫秒之后，执行代码
+			$("#sodroll").hide();
+			$("#sodrollCap").hide();
+			
+			//创建一个僵尸
+			var zomb = $("<div></div>");
+			//给僵尸添加样式
+			zomb.css({
+				width : "166px",
+				height : "144px",
+				background : "url(img/Zombie3.gif)",
+				position: "absolute",
+				left: "1200px",
+				top : "200px"
+			});
+			//把僵尸添加到页面上
+			$(document.body).append(zomb);
+			
+			
+		},4000);
+		
+		
+		
+		//隐藏的太早了
+//		$("#sodroll").hide();
+//		$("#sodrollCap").hide();
+	</script>
+</html>
+
